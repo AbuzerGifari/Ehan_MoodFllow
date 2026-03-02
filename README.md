@@ -16,11 +16,9 @@
 
 ## 📸 Interface Preview
 
-![App Preview] (https://github.com/user-attachments/assets/048c0141-88ef-407a-b940-9477c0a556c7)
-![App Preview]
-(https://github.com/user-attachments/assets/133b19ea-6048-4e79-a861-f42e49b0737b)
-![App Preview]
-(https://github.com/user-attachments/assets/fb04ef56-a11a-4b40-852b-8a376cac1d78)
+![App Preview](https://github.com/user-attachments/assets/fb04ef56-a11a-4b40-852b-8a376cac1d78)
+![App Preview](https://github.com/user-attachments/assets/133b19ea-6048-4e79-a861-f42e49b0737b)
+![App Preview](https://github.com/user-attachments/assets/048c0141-88ef-407a-b940-9477c0a556c7)
 
 ---
 
