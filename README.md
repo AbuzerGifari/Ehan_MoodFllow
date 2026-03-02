@@ -9,7 +9,7 @@
 
   **Ehan MoodFlow** is a next-gen, mobile-optimized mental health dashboard that bridges the gap between AI and mindfulness.
   
-  [Explore Live Demo 🚀](https://your-vercel-link.vercel.app)
+  [Explore Live Demo 🚀](https://ehanmoodflow.vercel.app/)
 </div>
 
 ---
@@ -17,7 +17,7 @@
 ## 📸 Interface Preview
 
 
-
+https://github.com/AbuzerGifari/Ehan_MoodFllow/issues/1#issue-4013301809
 ---
 
 ## ✨ Why It's Next-Level
