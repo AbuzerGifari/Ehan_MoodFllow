@@ -16,8 +16,9 @@
 
 ## 📸 Interface Preview
 
-
-https://github.com/AbuzerGifari/Ehan_MoodFllow/issues/1#issue-4013301809
+https://github.com/user-attachments/assets/048c0141-88ef-407a-b940-9477c0a556c7
+https://github.com/user-attachments/assets/133b19ea-6048-4e79-a861-f42e49b0737b
+https://github.com/user-attachments/assets/fb04ef56-a11a-4b40-852b-8a376cac1d78
 ---
 
 ## ✨ Why It's Next-Level
@@ -46,7 +47,7 @@ Integrated music recommendation system that suggests the perfect track based on 
 
 <div align="center">
 <p>Built with ❤️ by <b>Ehan</b></p>
-<a href="https://www.google.com/search?q=https://github.com/your-username">
+<a href="https://www.google.com/search?q=https://github.com/AbuzerGifari">
 <img src="https://www.google.com/search?q=https://img.shields.io/badge/Follow-Ehan-purple%3Fstyle%3Dflat-square%26logo%3Dgithub" />
 </a>
 </div>
