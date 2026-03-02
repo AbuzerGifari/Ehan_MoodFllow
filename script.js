@@ -1,90 +1,90 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. AI Greeting Logic
-    const hours = new Date().getHours();
-    const greet = hours < 12 ? "Morning, Ehan" : hours < 18 ? "Afternoon, Ehan" : "Evening, Ehan";
-    document.getElementById('userGreeting').innerText = `Good ${greet}.`;
+    const vibeSlider = document.getElementById('vibeSlider');
+    const vibeOrb = document.getElementById('vibeOrb');
+    const vibeLabel = document.getElementById('vibeLabel');
+    const auraBg = document.getElementById('auraBg');
+    const songName = document.getElementById('songName');
+    const songEmoji = document.getElementById('songEmoji');
 
-    // 2. Local AI Sentiment Engine (Free & Fast)
-    const analyzeBtn = document.getElementById('analyzeBtn');
-    analyzeBtn.addEventListener('click', () => {
-        const text = document.getElementById('journalText').value.toLowerCase();
-        const insightBox = document.getElementById('aiInsightBox');
-        const insightText = document.getElementById('insightText');
+    // 1. Dynamic Vibe & Song Engine
+    const songs = {
+        low: { name: "Comfort Chain - Instupendo", emoji: "🌊", color: "#3b82f6", label: "Low & Calm" },
+        mid: { name: "Lofi Girl - Chill Beats", emoji: "✨", color: "#8b5cf6", label: "Steady Flow" },
+        high: { name: "Blinding Lights - Weeknd", emoji: "🔥", color: "#f59e0b", label: "Peak Energy" }
+    };
 
-        if (!text) return;
+    vibeSlider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        let mood;
+        if (val < 35) mood = songs.low;
+        else if (val < 75) mood = songs.mid;
+        else mood = songs.high;
 
-        insightBox.classList.remove('hidden');
-        insightText.innerText = "Analyzing patterns...";
-
-        // Open Source Logic: Pattern Matching Sentiment
-        setTimeout(() => {
-            let feedback = "";
-            if (text.match(/(sad|down|tired|angry|hate|bad)/g)) {
-                feedback = "I notice some heavy emotions. Remember, it's okay to feel this way. Let's try the Zen Focus for 1 minute.";
-            } else if (text.match(/(happy|great|good|love|excited|achieved)/g)) {
-                feedback = "Your energy is peak! This is a great time to tackle your biggest goal for today.";
-                confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
-            } else {
-                feedback = "You're in a stable flow. Perfect for deep reflection or creative work.";
-            }
-            insightText.innerText = feedback;
-        }, 800);
+        vibeOrb.style.background = mood.color;
+        vibeOrb.style.boxShadow = `0 0 30px ${mood.color}`;
+        vibeLabel.innerText = mood.label;
+        auraBg.style.background = `radial-gradient(circle at 50% -20%, ${mood.color}, transparent 70%)`;
+        songName.innerText = mood.name;
+        songEmoji.innerText = mood.emoji;
+        document.documentElement.style.setProperty('--accent', mood.color);
     });
 
-    // 3. Voice-to-Text (Premium Feature)
-    const voiceBtn = document.getElementById('voiceBtn');
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    // 2. Zen Breathing Logic
+    const breathCircle = document.getElementById('breathCircle');
+    const breathText = document.getElementById('breathText');
+    let breathing = false;
 
-    if (SpeechRecognition) {
-        const recognition = new SpeechRecognition();
-        voiceBtn.onclick = () => {
-            recognition.start();
-            voiceBtn.innerText = "🛑";
-        };
-        recognition.onresult = (event) => {
-            document.getElementById('journalText').value += event.results[0][0].transcript;
-            voiceBtn.innerText = "🎤";
-        };
-    }
+    breathCircle.onclick = () => {
+        breathing = !breathing;
+        if (breathing) {
+            breathText.innerText = "Inhale";
+            breathCircle.classList.add('inhale');
+            const interval = setInterval(() => {
+                if(!breathing) clearInterval(interval);
+                breathText.innerText = breathText.innerText === "Inhale" ? "Exhale" : "Inhale";
+            }, 4000);
+        } else {
+            location.reload();
+        }
+    };
 
-    // 4. Zen Timer Logic
-    let timerEl = document.getElementById('timer');
-    let startBtn = document.getElementById('startZen');
-    let timeLeft = 60;
+    // 3. AI Sentiment Insight
+    document.getElementById('analyzeBtn').onclick = () => {
+        const text = document.getElementById('journalInput').value.toLowerCase();
+        const aiBox = document.getElementById('aiResponse');
+        const aiText = document.getElementById('aiText');
 
-    startBtn.onclick = () => {
-        const interval = setInterval(() => {
-            if(timeLeft <= 0) {
-                clearInterval(interval);
-                timerEl.innerText = "Done!";
-                startBtn.innerText = "Reset";
+        aiBox.classList.remove('hidden');
+        aiText.innerText = "MoodFlow is sensing your energy...";
+
+        setTimeout(() => {
+            if (text.includes('sad') || text.includes('tired')) {
+                aiText.innerText = "Insight: You're in a recovery phase. Listen to the suggested song and take 5 deep breaths.";
+            } else if (text.includes('happy') || text.includes('good')) {
+                aiText.innerText = "Insight: Your vibe is radiant! Perfect time for creative tasks.";
+                confetti({ particleCount: 100, spread: 70 });
             } else {
-                timeLeft--;
-                let mins = Math.floor(timeLeft / 60);
-                let secs = timeLeft % 60;
-                timerEl.innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                aiText.innerText = "Insight: You are grounded. A steady mind leads to a productive day.";
             }
         }, 1000);
     };
 
-    // 5. High-End Chart
+    // 4. Chart.js Setup
     const ctx = document.getElementById('moodChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'],
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
             datasets: [{
-                label: 'Mind Flow',
-                data: [1, 2, 1.5, 2, 2.5],
+                data: [50, 65, 40, 80, 70],
                 borderColor: '#8b5cf6',
-                tension: 0.4,
+                tension: 0.5,
                 fill: true,
-                backgroundColor: 'rgba(139, 92, 246, 0.05)'
+                backgroundColor: 'rgba(139, 92, 246, 0.1)'
             }]
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: { x: { display: false }, y: { display: false } }
         }
