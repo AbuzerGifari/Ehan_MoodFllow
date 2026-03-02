@@ -49,6 +49,5 @@ Integrated music recommendation system that suggests the perfect track based on 
 <div align="center">
 <p>Built with ❤️ by <b>Ehan</b></p>
 <a href="https://www.google.com/search?q=https://github.com/AbuzerGifari">
-<img src="https://img.shields.io/badge/Follow-Ehan-purple%3Fstyle%3Dflat-square%26logo%3Dgithub" />
-</a>
+<img src="https://img.shields.io/badge/Follow-Ehan-purple?style=flat-square&logo=github" alt="Follow Ehan"></a>
 </div>
