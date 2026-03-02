@@ -4,7 +4,7 @@
   ### *Elevate Your Vibe with AI-Powered Wellness*
 
   [![Vercel Analytics](https://img.shields.io/badge/Vercel-Analytics%20Enabled-black?style=for-the-badge&logo=vercel)](https://vercel.com)
-  [![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)](https://your-vercel-link.vercel.app)
+  [![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)](https://ehanmoodflow.vercel.app/)
   [![Made With](https://img.shields.io/badge/Made%20With-Pure%20JS-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
   **Ehan MoodFlow** is a next-gen, mobile-optimized mental health dashboard that bridges the gap between AI and mindfulness.
