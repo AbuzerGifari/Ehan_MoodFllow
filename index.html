@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Ehan MoodFlow | AI Wellness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="blob-bg"></div>
+
+    <nav class="glass-header">
+        <div class="brand">Ehan<span>MoodFlow</span></div>
+        <div class="status-indicator" id="aiPulse">AI Active</div>
+    </nav>
+
+    <main class="main-content">
+        <header class="greeting-box">
+            <h1 id="userGreeting">Loading your vibe...</h1>
+            <p id="dailyInspiration">"The mind is everything."</p>
+        </header>
+
+        <div class="bento-container">
+            <section class="card mood-card">
+                <h3>Vibe Intensity</h3>
+                <div class="mood-wheel">
+                    <button class="m-item" data-val="2" title="Awesome">👑</button>
+                    <button class="m-item" data-val="1" title="Okay">☁️</button>
+                    <button class="m-item" data-val="0" title="Low">💧</button>
+                </div>
+                <div id="moodFeedback" class="small-text">How's the energy, Ehan?</div>
+            </section>
+
+            <section class="card focus-card">
+                <h3>Zen Focus</h3>
+                <div class="timer-display" id="timer">01:00</div>
+                <button id="startZen" class="zen-btn">Start Breathing</button>
+            </section>
+
+            <section class="card journal-card">
+                <div class="card-head">
+                    <h3>AI Journaling</h3>
+                    <button id="voiceBtn" class="voice-trigger">🎤</button>
+                </div>
+                <textarea id="journalText" placeholder="Start typing or use voice..."></textarea>
+                <button id="analyzeBtn" class="action-btn">✨ Generate AI Insight</button>
+                
+                <div id="aiInsightBox" class="insight-reveal hidden">
+                    <div class="ai-icon">✦</div>
+                    <p id="insightText"></p>
+                </div>
+            </section>
+
+            <section class="card chart-card">
+                <h3>Trend Analysis</h3>
+                <div class="canvas-holder">
+                    <canvas id="moodChart"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
